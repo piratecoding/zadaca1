@@ -1,4 +1,5 @@
 require_relative 'phone'
+require_relative 'product'
 
 class Store
 	attr_accessor :name, :street, :website, :phones
@@ -11,6 +12,12 @@ class Store
 	end
 
 	def to_s
-		"#{super.to_s}, #{name}, #{street}, #{website}, #{phones}"
+		puts '*************************'
+		puts "Name: #{name}"
+		puts "Street: #{street}"
+		puts "Website: #{website}"
+		puts "Total phones: #{Phone.count}"
+		puts "Total phones in stock: #{Phone.count_in_stock}"
+		puts '*************************'
 	end
 end
