@@ -20,4 +20,46 @@ class Store
 		puts "Total phones in stock: #{Phone.count_in_stock}"
 		puts '*************************'
 	end
+
+	def expensive		
+		puts "Expensive phones: #{}"
+		puts '=================='
+		phones.select do |phone|
+			if phone.price > 800		
+				puts phone.to_s
+			end
+		end		
+	end
+
+	def cheap	
+		puts "Cheap phones: #{}"
+		puts '=================='
+		phones.select do |phone|
+			if phone.price < 300
+				puts phone.to_s 
+			end
+		end		
+	end
+
+	def os
+		puts "Android phones: #{}"
+		puts '=================='
+		phones.specs.each do |os|
+			specs.os.each do |key, value|
+				puts phone.to_s if value == 'Android'
+			end
+		end
+	end
+
+
+# 	def os
+# 		puts 'Android phones: '
+# 		puts '=================='
+# 		phones.each do |phone|
+# 			phone.specs.os.select do |os|
+# 				if specs.os == 'Android'
+# 				puts phone.to_s
+# 			end
+# 		end		
+# 	end
 end

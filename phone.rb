@@ -21,6 +21,7 @@ class Phone < Product
 		puts "	camera: #{specs[:camera]}"
 		puts "	bluetooth: #{specs[:bluetooth]}"
 		puts "	OS: #{specs[:os]}"
+		puts '________________________'
 	end
 
 	def self.count
