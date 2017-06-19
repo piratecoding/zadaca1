@@ -22,7 +22,7 @@ class Store
 	end
 
 	def expensive		
-		puts "Expensive phones: #{}"
+		puts "Expensive phones: #{Phone.count_expensive}"
 		puts '=================='
 		phones.select do |phone|
 			if phone.price > 800		
@@ -32,7 +32,7 @@ class Store
 	end
 
 	def cheap	
-		puts "Cheap phones: #{}"
+		puts "Cheap phones: #{Phone.count_cheap}"
 		puts '=================='
 		phones.select do |phone|
 			if phone.price < 300
@@ -41,25 +41,15 @@ class Store
 		end		
 	end
 
-	def os
-		puts "Android phones: #{}"
-		puts '=================='
-		phones.specs.each do |os|
-			specs.os.each do |key, value|
-				puts phone.to_s if value == 'Android'
-			end
-		end
-	end
-
-
-# 	def os
-# 		puts 'Android phones: '
-# 		puts '=================='
-# 		phones.each do |phone|
-# 			phone.specs.os.select do |os|
-# 				if specs.os == 'Android'
-# 				puts phone.to_s
-# 			end
-# 		end		
-# 	end
+	# def os
+	# 	puts "Android phones: #{}"
+	# 	puts '=================='
+	# 	phones.select do |phone|
+	# 		phone.specs.select do |key, value|
+	# 			puts phone.to_s if key == 'Android'
+	# 		end
+	# 	end
+	# end
+	# Ovo ne radi, prikazuje dodatno i sve ostale telefone 
+	# (nemam pojma sto)
 end
